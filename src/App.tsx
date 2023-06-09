@@ -43,7 +43,7 @@ function App() {
         switcher: bullet,
       },
       {
-        label: 'Hide Scheduled And Deadlines',
+        label: 'Hide Scheduled/Deadlines',
         switcher: scheduledOrDeadlines,
       },
       {
