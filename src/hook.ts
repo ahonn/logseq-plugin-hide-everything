@@ -15,7 +15,7 @@ export function useDisplaySwitch(name: string, selector: string | string[]) {
   useEffect(() => {
     queue.push(async () => {
       const contents = await logseq.Editor.getPage('Contents');
-      if (!contents?.properties?.[key]) {
+      if (contents?.properties?.[key] === true) {
         on();
       }
     });

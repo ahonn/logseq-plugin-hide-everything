@@ -1,18 +1,25 @@
-# Logseq Plugin Template React 🚀
+# Logseq Plugin Hide Everything
 
-## Features
+A plugin for hiding any UI elements in Logseq that you don't want.
 
-- Plug-and-play boilerplate with properly defined GitHub action defaults
-- Develop with HMR, empowered by lightning-fast Vite ⚡ with [vite-logseq-plugin](https://github.com/pengx17/vite-plugin-logseq)
-- TailwindCSS for styling
-- Pnpm
+If you are familiar with CSS, you can easily hide certain elements in Logseq's Custom CSS. Therefore, this plugin is designed to help users who are not familiar with CSS or want a convenient way to quickly hide/show elements.
 
-## How to get started
-1. Clone the repository or use the button "Use this template" on GitHub to create your own version of the repository 🔨
-2. Make sure you have pnpm installed, [install](https://pnpm.io/installation) if necessary 🛠
-3. Execute `pnpm install` 📦
-4. Change the plugin-name in `package.json` to your liking. Adapt both the package-name and the plugin-id at the bottom of the `package.json`. Make sure that they are not conflicting with plugins you already installed. 📝
-5. Execute `pnpm build` to build the plugin 🚧
-6. Enable developer-mode in Logseq, go to plugins, select "Load unpacked plugin" 🔌
-7. Select the directory of your plugin (not the `/dist`-directory, but the directory which includes your package.json) 📂
-8. Enjoy! 🎉
+> If my plugin has solved your problem and you would like to show your appreciation, you can choose to support me by [buy me a coffee](https://www.buymeacoffee.com/yuexunjiang).
+
+![](./screenshot.gif)
+
+## Install
+
+### Option 1: directly install via Marketplace
+
+### Option 2: manually load
+
+- turn on Logseq developer mode
+- [download the prebuilt package here](https://github.com/ahonn/logseq-plugin-todo/releases)
+- unzip the zip file and load from Logseq plugins page
+
+## Contribution
+Issues and PRs are welcome!
+
+## Licence
+MIT

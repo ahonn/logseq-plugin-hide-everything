@@ -107,7 +107,7 @@ function App() {
         <Box
           position="absolute"
           padding={4}
-          minWidth={280}
+          minWidth={240}
           backgroundColor="gray.50"
         >
           {switchs.map(({ label, switcher }) => {
@@ -134,7 +134,7 @@ function App() {
                 );
               }}
             />
-            <Text fontSize="sm">Hide Every Thing</Text>
+            <Text fontSize="sm">Hide EveryThing</Text>
           </Flex>
         </Box>
       </div>

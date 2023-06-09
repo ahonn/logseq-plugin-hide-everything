@@ -1,5 +1,5 @@
 {
-  "name": "logseq-plugin-ui-hideaway",
+  "name": "logseq-plugin-hide-everything",
   "version": "0.0.0",
   "main": "dist/index.html",
   "scripts": {
@@ -44,7 +44,7 @@
     "vite-plugin-logseq": "1.1.2"
   },
   "logseq": {
-    "id": "logseq-plugin-ui-hideaway",
+    "id": "logseq-plugin-hide-everything",
     "icon": "./logo.svg"
   }
 }

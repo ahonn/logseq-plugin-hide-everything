@@ -15,7 +15,7 @@ async function openPanel() {
     // @ts-ignore
     top: `${rect.top + 40}px`,
     // @ts-ignore
-    left: rect.left + 'px',
+    left: `${rect.left - 100}px`,
   });
 
   logseq.showMainUI();
