@@ -1,5 +1,5 @@
 {
-  "name": "logseq-plugin-template-react",
+  "name": "logseq-plugin-ui-hideaway",
   "version": "0.0.0",
   "main": "dist/index.html",
   "scripts": {
@@ -9,9 +9,15 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@chakra-ui/react": "^2.7.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@logseq/libs": "^0.0.14",
+    "framer-motion": "^10.12.16",
+    "queue": "^7.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "to-camel-case": "^1.0.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
@@ -21,6 +27,7 @@
     "@types/node": "18.16.16",
     "@types/react": "18.2.9",
     "@types/react-dom": "18.2.4",
+    "@types/to-camel-case": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "5.59.9",
     "@typescript-eslint/parser": "5.59.9",
     "@vitejs/plugin-react": "3.1.0",
@@ -37,7 +44,7 @@
     "vite-plugin-logseq": "1.1.2"
   },
   "logseq": {
-    "id": "_pengx17-logseq-template-react",
+    "id": "logseq-plugin-ui-hideaway",
     "icon": "./logo.svg"
   }
 }

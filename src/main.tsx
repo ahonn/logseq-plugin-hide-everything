@@ -1,60 +1,55 @@
-import "@logseq/libs";
+import '@logseq/libs';
+import React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import { logseq as plugin } from '../package.json';
+import { ChakraProvider } from '@chakra-ui/react';
+import App from './App';
 
-import React from "react";
-import * as ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
+async function openPanel() {
+  const rect = await logseq.App.queryElementRect('#' + plugin.id);
+  const panel = document.querySelector('#' + plugin.id)!;
 
-import { logseq as PL } from "../package.json";
+  // @ts-ignore
+  Object.assign(panel.style, {
+    position: 'fixed',
+    // @ts-ignore
+    top: `${rect.top + 40}px`,
+    // @ts-ignore
+    left: rect.left + 'px',
+  });
 
-// @ts-expect-error
-const css = (t, ...args) => String.raw(t, ...args);
+  logseq.showMainUI();
+}
 
-const pluginId = PL.id;
+function createModel() {
+  return {
+    openPanel,
+  };
+}
 
 function main() {
-  console.info(`#${pluginId}: MAIN`);
-  const root = ReactDOM.createRoot(document.getElementById("app")!);
-
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-
-  function createModel() {
-    return {
-      show() {
-        logseq.showMainUI();
-      },
-    };
-  }
-
-  logseq.provideModel(createModel());
   logseq.setMainUIInlineStyle({
+    position: 'fixed',
     zIndex: 11,
   });
 
-  const openIconName = "template-plugin-open";
-
-  logseq.provideStyle(css`
-    .${openIconName} {
-      opacity: 0.55;
-      font-size: 20px;
-      margin-top: 4px;
-    }
-
-    .${openIconName}:hover {
-      opacity: 0.9;
-    }
-  `);
-
-  logseq.App.registerUIItem("toolbar", {
-    key: openIconName,
+  logseq.App.registerUIItem('toolbar', {
+    key: plugin.id,
     template: `
-      <div data-on-click="show" class="${openIconName}">⚙️</div>
-    `,
+        <a id="${plugin.id}" data-on-click="openPanel" data-rect class="button">
+          <i class="ti ti-eraser" style="font-size: 20px"></i>
+        </a>
+      `,
   });
+
+  const root = ReactDOM.createRoot(document.getElementById('app')!);
+  root.render(
+    <React.StrictMode>
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+    </React.StrictMode>,
+  );
 }
 
-logseq.ready(main).catch(console.error);
+logseq.ready(createModel()).then(main).catch(console.error);
