@@ -15,7 +15,7 @@ If you are familiar with CSS, you can easily hide certain elements in Logseq's C
 ### Option 2: manually load
 
 - turn on Logseq developer mode
-- [download the prebuilt package here](https://github.com/ahonn/logseq-plugin-todo/releases)
+- [download the prebuilt package here](https://github.com/ahonn/logseq-plugin-hide-everything/releases)
 - unzip the zip file and load from Logseq plugins page
 
 ## Contribution
