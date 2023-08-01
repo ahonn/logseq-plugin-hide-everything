@@ -4,7 +4,7 @@ A plugin for hiding any UI elements in Logseq that you don't want.
 
 If you are familiar with CSS, you can easily hide certain elements in Logseq's Custom CSS. Therefore, this plugin is designed to help users who are not familiar with CSS or want a convenient way to quickly hide/show elements.
 
-> If my plugin has solved your problem and you would like to show your appreciation, you can choose to support me by [buy me a coffee](https://www.buymeacoffee.com/yuexunjiang).
+<a href="https://www.buymeacoffee.com/yuexunjiang"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=yuexunjiang&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff" /></a>
 
 ![](./screenshot.gif)
 
@@ -19,7 +19,9 @@ If you are familiar with CSS, you can easily hide certain elements in Logseq's C
 - unzip the zip file and load from Logseq plugins page
 
 ## Contribution
+
 Issues and PRs are welcome!
 
 ## Licence
+
 MIT
