@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ahonn/logseq-plugin-hide-everything/compare/v1.0.0...v1.1.0) (2023-08-01)
+
+
+### Features
+
+* add done/canceled tasks switcher ([43a87d1](https://github.com/ahonn/logseq-plugin-hide-everything/commit/43a87d1b0ba21243c809e5b7c15b8cc3635b57b4))
+
 # 1.0.0 (2023-06-09)
 
 
