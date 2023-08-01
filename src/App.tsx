@@ -23,10 +23,8 @@ function App() {
     '.references.page-unlinked',
   );
   const graphFilters = useDisplaySwitch('graph-filters', '.graph-filters');
-  const blockContainer = useDisplaySwitch(
-    'blockContainer',
-    '.blocks-container',
-  );
+  const doneTasks = useDisplaySwitch('done-tasks', '[data-refs-self*="done"]');
+  const canceledTasks = useDisplaySwitch('canceled-tasks', '[data-refs-self*="canceled"]');
 
   const switchs = useMemo(() => {
     return [
@@ -59,9 +57,13 @@ function App() {
         switcher: graphFilters,
       },
       {
-        label: 'Hide Block Container',
-        switcher: blockContainer,
+        label: 'Hide Done Tasks',
+        switcher: doneTasks,
       },
+      {
+        label: 'Hide Canceled Tasks',
+        switcher: canceledTasks,
+      }
     ];
   }, [
     recent,
@@ -71,7 +73,8 @@ function App() {
     linkedReferences,
     unlinkedReferences,
     graphFilters,
-    blockContainer,
+    doneTasks,
+    canceledTasks,
   ]);
 
   const hiddenEveryThing = useMemo(
